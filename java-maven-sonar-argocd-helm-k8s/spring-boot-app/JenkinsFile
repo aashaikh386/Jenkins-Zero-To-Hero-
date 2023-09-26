@@ -33,7 +33,7 @@ pipeline {
       environment {
         DOCKER_IMAGE = "aashaikh386/ultimate-cicd:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = 'dckr_pat_GdF7YwXWYNfC-3zfsH2ixw69XhQ'
+        REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
       steps {
         script {
